@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PatihuaniApp</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="registrar">Registrate</string>
+</resources>
