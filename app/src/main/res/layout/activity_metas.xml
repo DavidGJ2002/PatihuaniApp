@@ -28,22 +28,10 @@
         app:layout_constraintTop_toBottomOf="@+id/lv_metas" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_agreagar_meta2"
-        android:layout_width="189dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="16dp"
-        android:background="@android:color/black"
-        android:text="Añadir meta"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lv_metas" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_agreagar_meta"
         android:layout_width="189dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/black"
         android:text="Añadir meta"

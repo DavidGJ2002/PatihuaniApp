@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.database.*
 
 class IniciarSesion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +18,8 @@ class IniciarSesion : AppCompatActivity() {
         val ptContrasena = findViewById<EditText>(R.id.contrasena)
         val opRegistrar = findViewById<TextView>(R.id.opcionRegistrate)
 
-        val database = FirebaseDatabase.getInstance()
-        val usuariosRef = database.getReference("usuarios")
+        //val database = FirebaseDatabase.getInstance()
+        //val usuariosRef = database.getReference("usuarios")
 
         btnSiguiente.setOnClickListener {
             val usuario =ptUsuario.text.toString()
