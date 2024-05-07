@@ -13,6 +13,15 @@
         android:theme="@style/Theme.PatihuaniApp"
         tools:targetApi="31">
         <activity
+            android:name=".DietaNueva"
+            android:exported="false" />
+        <activity
+            android:name=".Caminar"
+            android:exported="false" />
+        <activity
+            android:name=".Noticia"
+            android:exported="false" />
+        <activity
             android:name=".Perfil"
             android:exported="false" />
         <activity
