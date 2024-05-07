@@ -7,53 +7,19 @@
     tools:context=".Registrar">
 
     <Button
-        android:id="@+id/botonIS"
+        android:id="@+id/botonRegistra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="560dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="636dp"
+        android:drawableTint="#000000"
 
-        android:text="@string/login"
+        android:text="@string/registrar"
         android:textAlignment="center"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewN" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintStart_toStartOf="@+id/nombre"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
-        android:layout_marginTop="52dp">
-
-        <EditText
-            android:id="@+id/contrasena"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textViewC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
-        android:text="Contraseña"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -104,26 +70,49 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewN"
+    <EditText
+        android:id="@+id/nombreR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="60dp"
-        android:text="Nombre"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Ingresa tu nombre"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <HorizontalScrollView
-        android:layout_width="409dp"
-        android:layout_height="121dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="608dp">
+    <EditText
+        android:id="@+id/apellidosR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Ingresa tus apellidos"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/nombreR"
+        app:layout_constraintTop_toBottomOf="@+id/nombreR" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical" />
-    </HorizontalScrollView>
+    <EditText
+        android:id="@+id/contrasenaR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Ingresa una contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/correoR"
+        app:layout_constraintTop_toBottomOf="@+id/correoR" />
+
+    <EditText
+        android:id="@+id/correoR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Ingresa tu correo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/apellidosR"
+        app:layout_constraintTop_toBottomOf="@+id/apellidosR" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

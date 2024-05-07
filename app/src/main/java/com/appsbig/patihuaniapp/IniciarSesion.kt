@@ -5,16 +5,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.database.*
 
 class IniciarSesion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_iniciarsesion)
 
-        val btnSiguiente = findViewById<Button>(R.id.botonSig)
+        val btnSiguiente = findViewById<Button>(R.id.botonIS)
         val ptUsuario = findViewById<EditText>(R.id.nombre)
         val ptContrasena = findViewById<EditText>(R.id.contrasena)
+        val opRegistrar = findViewById<TextView>(R.id.opcionRegistrate)
+
+        val database = FirebaseDatabase.getInstance()
+        val usuariosRef = database.getReference("usuarios")
 
         btnSiguiente.setOnClickListener {
             val usuario =ptUsuario.text.toString()
@@ -23,9 +29,17 @@ class IniciarSesion : AppCompatActivity() {
             if(usuario == "david" && contrasena == "123"){
                 val intent = Intent(this, Bienvenido::class.java)
                 intent.putExtra("usuario", usuario)
+
                 startActivity(intent)
             }else{
                 Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        opRegistrar.setOnClickListener {
+            val intentRegistraUs = Intent(this, Registrar::class.java)
+            startActivity(intentRegistraUs)
+        }
     }
-}}
+}
+
