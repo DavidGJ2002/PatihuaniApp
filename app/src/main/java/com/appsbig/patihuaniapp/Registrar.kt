@@ -22,7 +22,7 @@ class Registrar : AppCompatActivity() {
         val btnRegistrar = findViewById<Button>(R.id.botonRegistra)
         val opIS = findViewById<TextView>(R.id.opcionIS2)
 
-        /*btnRegistrar.setOnClickListener {
+        btnRegistrar.setOnClickListener {
             val nombreU = rNombre.text.toString()
             val apellidosU = rApellidos.text.toString()
             val correoU = rCorreo.text.toString()
@@ -44,7 +44,7 @@ class Registrar : AppCompatActivity() {
                     }
             }
 
-            }*/
+            }
         opIS.setOnClickListener {
             val intentIS = Intent(this,IniciarSesion::class.java)
             startActivity(intentIS)

@@ -18,7 +18,7 @@ class Bienvenido : AppCompatActivity() {
         tvBienvenida.append(" "+ nombreUsuario)
 
         Handler().postDelayed({
-            val intent = Intent(this, Perfil::class.java)
+            val intent = Intent(this, Navegacion::class.java)
             startActivity(intent)
             finish()
         }, 3000)
