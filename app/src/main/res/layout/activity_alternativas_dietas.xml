@@ -1,10 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".alternativasDietas">
+    tools:context="alternativasDietas"
+    tools:ignore="ExtraText">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="324dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:text="<              Alternativas Saludables "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="264dp"
+            android:layout_marginTop="84dp"
+
+            android:text="Ver Mas >"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="292dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="133dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="134dp"
+            android:layout_height="58dp"
+            android:text="informacion nutricional"
+            app:iconTint="@color/material_dynamic_neutral0"
+            app:rippleColor="@color/material_dynamic_neutral0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="280dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto Saludable1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="261dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="136dp"
+            tools:srcCompat="@tools:sample/avatars"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="productos Saludables 2"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="261dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="152dp"
+            android:layout_height="56dp"
+            android:text="Informacion Nutricional"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="280dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Dietas Alternativas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="android:color/white"
+            android:text="Ver mas >"
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteX="276dp"
+            tools:layout_editor_absoluteY="336dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:text="Producto Saludable 3"
+            app:layout_constraintBottom_toTopOf="@+id/button6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="128dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="68dp"
+            android:text="Informacion Nutricional"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="440dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto Saludable 3"
+            tools:layout_editor_absoluteX="242dp"
+            tools:layout_editor_absoluteY="587dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="129dp"
+            android:layout_height="60dp"
+            android:text="Informacion Nutricional"
+            tools:layout_editor_absoluteX="252dp"
+            tools:layout_editor_absoluteY="606dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tus Dietas"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <Button
+            android:id="@+id/customButton"
+            android:layout_width="95dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="372dp"
+            android:background="android:color/white"
+            android:drawableWidth="6dp"
+            android:drawableHeight="6dp"
+
+            android:paddingStart="8dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="16dp"
+            android:text="Frutas"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateIds,UnknownId" />
+
+        <Button
+            android:id="@+id/btnVerduras"
+            android:layout_width="95dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="376dp"
+            android:background="android:color/white"
+            android:drawableWidth="6dp"
+            android:drawableHeight="6dp"
+
+            android:paddingStart="8dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="16dp"
+            android:text="Verduras"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnknownId" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
