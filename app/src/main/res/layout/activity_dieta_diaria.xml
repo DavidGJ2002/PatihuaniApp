@@ -16,7 +16,7 @@
         android:layout_marginBottom="55dp"
         android:text="Ingredientes "
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/dieta_diaria_whats"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <androidx.cardview.widget.CardView
@@ -125,7 +125,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/dieta_diaria_whats"
         android:layout_width="384dp"
         android:layout_height="112dp"
         android:layout_marginStart="4dp"

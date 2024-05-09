@@ -39,7 +39,8 @@ actividad para prevenir lesiones."
         android:textAlignment="textStart"/>
 
     <ImageView
+        android:id="@+id/compartirCaminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/whats_compartir"/>
+        android:src="@drawable/whats_compartir" />
 </LinearLayout>
