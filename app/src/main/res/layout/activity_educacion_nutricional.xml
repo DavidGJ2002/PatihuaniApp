@@ -38,7 +38,7 @@
             android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Informacion"
             android:layout_gravity="start"
             android:textColor="@android:color/black" />
@@ -74,7 +74,7 @@
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Informacion"
             android:layout_gravity="start"
             android:textColor="@android:color/black" />
@@ -110,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Informacion"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -147,7 +147,7 @@
             android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Informacion"
             android:gravity="start"
             android:textColor="@android:color/black" />
@@ -170,7 +170,6 @@
         android:text="Educacion Nutricional"
         tools:layout_editor_absoluteX="45dp"
         android:textColor="@android:color/black"
-
         tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints" />
 

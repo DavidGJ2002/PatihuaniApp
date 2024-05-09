@@ -38,7 +38,7 @@
             android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Te ayuda con ..."
 
             android:textColor="@android:color/black" />
@@ -74,7 +74,7 @@
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Te ayuda con ..."
 
             android:textColor="@android:color/black" />
@@ -108,7 +108,7 @@
             android:id="@+id/button10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Te ayuda con ..."
 
             android:textColor="@android:color/black" />
@@ -144,7 +144,7 @@
             android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:text="Te ayuda con ..."
 
             android:textColor="@android:color/black" />
