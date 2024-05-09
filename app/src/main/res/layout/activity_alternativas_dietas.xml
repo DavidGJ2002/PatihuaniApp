@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +18,7 @@
             android:layout_height="41dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
-            android:text="<              Alternativas Saludables "
+            android:text="Alternativas Saludables "
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
             android:layout_marginStart="264dp"
             android:layout_marginTop="84dp"
 
-            android:text="Ver Mas >"
+            android:text="Ver Mas"
             android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -116,8 +116,8 @@
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="android:color/white"
-            android:text="Ver mas >"
+            android:background="@android:color/white"
+            android:text="Ver mas"
             android:textColor="@android:color/black"
             tools:layout_editor_absoluteX="276dp"
             tools:layout_editor_absoluteY="336dp"
@@ -190,7 +190,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="372dp"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:drawableWidth="6dp"
             android:drawableHeight="6dp"
 
@@ -210,7 +210,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="280dp"
             android:layout_marginTop="376dp"
-            android:background="android:color/white"
+            android:background="@android:color/white"
             android:drawableWidth="6dp"
             android:drawableHeight="6dp"
 

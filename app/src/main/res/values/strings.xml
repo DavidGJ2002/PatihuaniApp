@@ -13,4 +13,18 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string-array name="estilosvida">
+        <item>Poco o nada de ejercicio</item>
+        <item>Ejercicio Ligero</item>
+        <item>Ejercicio Moderado</item>
+        <item>Ejercio Fuerte</item>
+    </string-array>
+
+    <string-array name="actividadfisica">
+        <item>Poco o nada de ejercicio</item>
+        <item>Ejercicio Ligero</item>
+        <item>Ejercicio Moderado</item>
+        <item>Ejercio Fuerte</item>
+    </string-array>
 </resources>

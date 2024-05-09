@@ -167,7 +167,7 @@
         android:id="@+id/button12"
         android:layout_width="319dp"
         android:layout_height="60dp"
-        android:text="< Educacion Nutricional"
+        android:text="Educacion Nutricional"
         tools:layout_editor_absoluteX="45dp"
         android:textColor="@android:color/black"
 
@@ -181,7 +181,7 @@
         android:layout_marginStart="264dp"
         android:layout_marginTop="84dp"
 
-        android:text="Ver Mas >"
+        android:text="Ver Mas"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
