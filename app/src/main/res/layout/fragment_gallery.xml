@@ -7,17 +7,134 @@
     android:layout_height="match_parent"
     tools:context=".ui.gallery.GalleryFragment" >
 
-    <TextView
-        android:id="@+id/text_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imagenPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:shapeAppearanceOverlay="@style/ImageViewRedonda"
+        app:srcCompat="@drawable/perfil" />
+
+    <ImageButton
+        android:id="@+id/botonAgregaFoto"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="120dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/camara"
+        app:layout_constraintEnd_toEndOf="@+id/imagenPerfil"
+        app:layout_constraintStart_toStartOf="@+id/imagenPerfil"
+        app:layout_constraintTop_toTopOf="@+id/imagenPerfil" />
+
+    <EditText
+        android:id="@+id/editarFechaNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:ems="10"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editarAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editarPeso" />
+
+    <Spinner
+        android:id="@+id/spEstilosVida"
+        android:layout_width="250dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:entries="@array/estilosvida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editarAltura" />
+
+    <Spinner
+        android:id="@+id/spActFisica"
+        android:layout_width="250dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="40dp"
+        android:entries="@array/actividadfisica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editarAltura" />
+
+    <EditText
+        android:id="@+id/infoExtra"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/contenedor"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLines="5"
+        android:padding="10dp"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spActFisica" />
+
+    <ImageButton
+        android:id="@+id/botonUbicacion"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ubicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoExtra" />
+
+    <TextView
+        android:id="@+id/ubicacionSeleccionada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ubicación no seleccionada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonUbicacion" />
+
+    <Button
+        android:id="@+id/btnActualizarP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/actualiza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonUbicacion" />
+
+    <EditText
+        android:id="@+id/editarPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editarFechaNacimiento" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

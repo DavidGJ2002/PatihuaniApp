@@ -7,13 +7,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import com.google.firebase.database.FirebaseDatabase
+import com.appsbig.patihuaniapp.ui.gallery.Usuario
+import com.google.firebase.database.*
 
 class Registrar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
         setContentView(R.layout.activity_registrar)
         val rNombre = findViewById<EditText>(R.id.nombreR)
         val rApellidos = findViewById<EditText>(R.id.apellidosR)
@@ -28,27 +27,45 @@ class Registrar : AppCompatActivity() {
             val correoU = rCorreo.text.toString()
             val contrasenaU = rContrasena.text.toString()
 
+            if (nombreU.isEmpty() || apellidosU.isEmpty() || correoU.isEmpty() || contrasenaU.isEmpty()) {
+                Toast.makeText(this, "Por favor, llena todos los campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val bd = FirebaseDatabase.getInstance()
             val usuarioRef = bd.getReference("usuarios")
-            val usuarioid = usuarioRef.push().key
-            val usuario = Usuario(nombreU,apellidosU,correoU,contrasenaU)
 
-            usuarioid?.let {
-                usuarioRef.child(it).setValue(usuario)
-                    .addOnSuccessListener {
-                        Toast.makeText(this,"Registro exitoso", Toast.LENGTH_SHORT).show()
-                    }
-                    .addOnFailureListener {
-                        Toast.makeText(this, "Error al registrar", Toast.LENGTH_SHORT).show()
-                        println("verificar llenado de campos: ${it.message}")
-                    }
-            }
+            val query = usuarioRef.orderByChild("correo").equalTo(correoU)
+            query.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        Toast.makeText(this@Registrar, "Este correo ya está registrado", Toast.LENGTH_SHORT).show()
+                    } else {
+                        val usuarioid = usuarioRef.push().key
+                        val usuario = Usuario(nombreU, apellidosU, correoU, contrasenaU, null, null, null, null, null, null, null)
 
-            }
-        opIS.setOnClickListener {
-            val intentIS = Intent(this,IniciarSesion::class.java)
-            startActivity(intentIS)
+                        usuarioid?.let {
+                            usuarioRef.child(it).setValue(usuario)
+                                .addOnSuccessListener {
+                                    Toast.makeText(this@Registrar, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                                }
+                                .addOnFailureListener {
+                                    Toast.makeText(this@Registrar, "Error al registrar", Toast.LENGTH_SHORT).show()
+                                    println("verificar llenado de campos: ${it.message}")
+                                }
+                        }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Toast.makeText(this@Registrar, "Error al verificar el correo: ${databaseError.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
         }
 
+        opIS.setOnClickListener {
+            val intentIS = Intent(this, IniciarSesion::class.java)
+            startActivity(intentIS)
+        }
     }
 }

@@ -7,8 +7,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.appsbig.patihuaniapp.ui.gallery.GalleryFragment
+import com.appsbig.patihuaniapp.ui.gallery.Usuario
+import com.google.firebase.database.*
 
 class IniciarSesion : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_iniciarsesion)
@@ -17,28 +21,43 @@ class IniciarSesion : AppCompatActivity() {
         val ptUsuario = findViewById<EditText>(R.id.nombre)
         val ptContrasena = findViewById<EditText>(R.id.contrasena)
         val opRegistrar = findViewById<TextView>(R.id.opcionRegistrate)
-
-        //val database = FirebaseDatabase.getInstance()
-        //val usuariosRef = database.getReference("usuarios")
+        val databaseRef = FirebaseDatabase.getInstance().getReference("usuarios")
 
         btnSiguiente.setOnClickListener {
-            val usuario =ptUsuario.text.toString()
+            val correo = ptUsuario.text.toString()
             val contrasena = ptContrasena.text.toString()
+            databaseRef.orderByChild("correo").equalTo(correo).addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    var actividadIniciada = false
+                    if (snapshot.exists()) {
+                        snapshot.children.forEach { child ->
+                            val usuario = child.getValue(Usuario::class.java)
+                            if (usuario != null && usuario.contrasena == contrasena && !actividadIniciada) {
+                                val intent = Intent(this@IniciarSesion, Bienvenido::class.java).apply {
+                                    putExtra("usuario", usuario.nombre)
+                                }
+                                startActivity(intent)
 
-            if(usuario == "david" && contrasena == "123"){
-                val intent = Intent(this, Bienvenido::class.java)
-                intent.putExtra("usuario", usuario)
+                                actividadIniciada = true  // Marcar que se ha iniciado una actividad
+                            }
+                        }
+                        if (!actividadIniciada) {
+                            Toast.makeText(this@IniciarSesion, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                        }
+                    } else {
+                        Toast.makeText(this@IniciarSesion, "Usuario no encontrado", Toast.LENGTH_SHORT).show()
+                    }
+                }
 
-                startActivity(intent)
-            }else{
-                Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_SHORT).show()
-            }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(this@IniciarSesion, "Error al acceder a la base de datos: ${error.message}", Toast.LENGTH_LONG).show()
+                }
+            })
         }
 
         opRegistrar.setOnClickListener {
-            val intentRegistraUs = Intent(this, Registrar::class.java)
-            startActivity(intentRegistraUs)
+            startActivity(Intent(this, Registrar::class.java))
         }
     }
 }
-
