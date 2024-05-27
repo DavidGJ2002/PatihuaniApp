@@ -27,21 +27,24 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Caminar"
+            android:text="Correr"
             android:textStyle="bold"
             android:textSize="30dp"/>
 
 
     </LinearLayout>
+
+
+
     <ImageView
         android:layout_width="413dp"
         android:layout_height="374dp"
-        android:src="@drawable/__chicas_caminado"
+        android:src="@drawable/correr"
         />
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Caminar"
+        android:text="Correr"
         android:textStyle="bold"
         android:textSize="16dp"
         android:padding="5dp"/>
@@ -52,11 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Para obtener los máximos beneficios, se recomienda caminar al
-menos 30 minutos al día, la mayoría de los días de la semana.
-Además, es importante mantener una postura adecuada al caminar,
-usar calzado cómodo y realizar estiramientos antes y después de la
-actividad para prevenir lesiones."
+        android:text="Para obtener los máximos beneficios al correr, es recomendable comenzar con un calentamiento adecuado para preparar los músculos y articulaciones. Durante la carrera, es importante mantener una técnica de respiración constante y una postura erguida para maximizar la eficiencia y reducir el riesgo de lesiones. Después de correr, es fundamental realizar ejercicios de enfriamiento y estiramientos para ayudar en la recuperación muscular y prevenir la rigidez. Es importante aumentar gradualmente la intensidad y la duración de la carrera para evitar el agotamiento y las lesiones."
         android:textAlignment="textStart" />
 
     <ImageView
