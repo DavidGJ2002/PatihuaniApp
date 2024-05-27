@@ -27,19 +27,23 @@
         android:textStyle="bold"
         android:textSize="16dp"
         android:padding="5dp"/>
+
     <TextView
+
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="Para obtener los máximos beneficios, se recomienda caminar al
 menos 30 minutos al día, la mayoría de los días de la semana.
 Además, es importante mantener una postura adecuada al caminar,
 usar calzado cómodo y realizar estiramientos antes y después de la
 actividad para prevenir lesiones."
-        android:layout_margin="10dp"
-        android:textAlignment="textStart"/>
+        android:textAlignment="textStart" />
 
     <ImageView
+        android:id="@+id/compartirCaminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/whats_compartir"/>
+        android:src="@drawable/whats_compartir" />
 </LinearLayout>
