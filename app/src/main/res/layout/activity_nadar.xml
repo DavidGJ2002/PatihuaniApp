@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Caminar">
-
     <!-- LinearLayout horizontal para el título y el botón de regreso -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             android:id="@+id/button_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regresar"
+            android:text="Nadar"
             android:layout_gravity="start"
             android:layout_margin="16dp"/>
         <!-- Título -->
@@ -27,21 +26,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Caminar"
+            android:text="Correr"
             android:textStyle="bold"
             android:textSize="30dp"/>
 
 
     </LinearLayout>
+
     <ImageView
         android:layout_width="413dp"
         android:layout_height="374dp"
-        android:src="@drawable/__chicas_caminado"
+        android:src="@drawable/nadar"
         />
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Caminar"
+        android:text="Nadar"
         android:textStyle="bold"
         android:textSize="16dp"
         android:padding="5dp"/>
@@ -52,11 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Para obtener los máximos beneficios, se recomienda caminar al
-menos 30 minutos al día, la mayoría de los días de la semana.
-Además, es importante mantener una postura adecuada al caminar,
-usar calzado cómodo y realizar estiramientos antes y después de la
-actividad para prevenir lesiones."
+        android:text="Nadar es una excelente forma de ejercicio que beneficia tanto al cuerpo como a la mente. Al nadar, se ejercitan varios grupos musculares al mismo tiempo, lo que mejora la fuerza y la resistencia. Además, es un ejercicio de bajo impacto, lo que significa que es suave para las articulaciones y adecuado para personas de todas las edades y niveles de condición física."
         android:textAlignment="textStart" />
 
     <ImageView

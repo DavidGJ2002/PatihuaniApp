@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Caminar">
-
     <!-- LinearLayout horizontal para el título y el botón de regreso -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,21 +26,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Caminar"
+            android:text="Saltar"
             android:textStyle="bold"
             android:textSize="30dp"/>
 
 
     </LinearLayout>
+
     <ImageView
         android:layout_width="413dp"
         android:layout_height="374dp"
-        android:src="@drawable/__chicas_caminado"
+        android:src="@drawable/saltar"
         />
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Caminar"
+        android:text="Saltar"
         android:textStyle="bold"
         android:textSize="16dp"
         android:padding="5dp"/>
@@ -52,11 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Para obtener los máximos beneficios, se recomienda caminar al
-menos 30 minutos al día, la mayoría de los días de la semana.
-Además, es importante mantener una postura adecuada al caminar,
-usar calzado cómodo y realizar estiramientos antes y después de la
-actividad para prevenir lesiones."
+        android:text="Saltar la cuerda es un ejercicio cardiovascular altamente efectivo que ofrece una variedad de beneficios para la salud. Es una forma divertida y económica de hacer ejercicio que puede realizarse en casi cualquier lugar y en poco tiempo."
         android:textAlignment="textStart" />
 
     <ImageView
