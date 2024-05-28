@@ -15,9 +15,9 @@ class Caminar : AppCompatActivity() {
         val imagen = findViewById<ImageView>(R.id.compartirCaminar) // define la variable imagen como un ImageView
         val stringMsj="checa lo que la aplicacion Patihuamiapp me recomendo sobre caminar aqui: https://play.google.com/store/apps/details?id=com.appsbig.patihuaapp&hl=es_MX&gl=US" // define la variable stringMsj como un String
         imagen.setOnClickListener {// cuando se hace click en la imagen
-            //ServicioAlarma.configurarAlarma(this,1,10_000L)// 10segundos
+            ServicioAlarma.configurarAlarma(this,1,10_000L)// 10segundos
             //Notificaciones.mostrarNotificacion(this,"amar","amor oir dolor")
-            Whatsapp.compartirMensajeTexto(this, stringMsj) // llama a la funcion compartirMensajeTexto de la clase Whatsapp
+            //Whatsapp.compartirMensajeTexto(this, stringMsj) // llama a la funcion compartirMensajeTexto de la clase Whatsapp
         }
 
     }
