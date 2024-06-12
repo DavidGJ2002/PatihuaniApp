@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "532186271202",
-    "project_id": "patihuaniapp-27a65",
-    "storage_bucket": "patihuaniapp-27a65.appspot.com"
+    "project_number": "438122992527",
+    "project_id": "apppatihuani",
+    "storage_bucket": "apppatihuani.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:532186271202:android:6f258be44f2895934d3dbb",
+        "mobilesdk_app_id": "1:438122992527:android:45e91ed59b23db710071fa",
         "android_client_info": {
           "package_name": "com.appsbig.patihuaniapp"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB6RxkerZ5ojNjL7orm26bf1QK60UG93Bg"
+          "current_key": "AIzaSyD2j4m_bNvcv0VJjShjSEfsS5bVXEEZoiI"
         }
       ],
       "services": {
