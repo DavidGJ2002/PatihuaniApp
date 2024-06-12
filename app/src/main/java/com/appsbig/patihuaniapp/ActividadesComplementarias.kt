@@ -41,24 +41,28 @@ class ActividadesComplementarias : AppCompatActivity() {
         button8.setOnClickListener {
             val intent = Intent(this, Caminar::class.java)
             intent.putExtra("boton_seleccionado", "caminar")
+            intent.putExtra("return_activity", "ActividadesComplementarias")
             startActivity(intent)
         }
 
         button9.setOnClickListener {
             val intent = Intent(this, Caminar::class.java)
             intent.putExtra("boton_seleccionado", "correr")
+            intent.putExtra("return_activity", "ActividadesComplementarias")
             startActivity(intent)
         }
 
         button10.setOnClickListener {
             val intent = Intent(this, Caminar::class.java)
             intent.putExtra("boton_seleccionado", "nadar")
+            intent.putExtra("return_activity", "ActividadesComplementarias")
             startActivity(intent)
         }
 
         button11.setOnClickListener {
             val intent = Intent(this, Caminar::class.java)
             intent.putExtra("boton_seleccionado", "saltar")
+            intent.putExtra("return_activity", "ActividadesComplementarias")
             startActivity(intent)
         }
     }

@@ -15,19 +15,20 @@
         android:gravity="start"
         android:padding="10dp">
         <!-- Botón de regreso -->
+        <!-- Título -->
         <Button
             android:id="@+id/back_Regreso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regresar"
             android:layout_gravity="start"
-            android:layout_margin="16dp"/>
-        <!-- Título -->
+            android:layout_margin="16dp"
+            android:text="Regresar" />
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Correr"
+            android:text="Hipertencion"
             android:textStyle="bold"
             android:textSize="30dp"/>
 
@@ -39,12 +40,12 @@
     <ImageView
         android:layout_width="413dp"
         android:layout_height="374dp"
-        android:src="@drawable/correr"
+        android:src="@drawable/hipertencion"
         />
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Correr"
+        android:text="Hipertencion"
         android:textStyle="bold"
         android:textSize="16dp"
         android:padding="5dp"/>
@@ -55,7 +56,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Para obtener los máximos beneficios al correr, es recomendable comenzar con un calentamiento adecuado para preparar los músculos y articulaciones. Durante la carrera, es importante mantener una técnica de respiración constante y una postura erguida para maximizar la eficiencia y reducir el riesgo de lesiones. Después de correr, es fundamental realizar ejercicios de enfriamiento y estiramientos para ayudar en la recuperación muscular y prevenir la rigidez. Es importante aumentar gradualmente la intensidad y la duración de la carrera para evitar el agotamiento y las lesiones."
+        android:text="Comer una mayor variedad de alimentos ricos en proteínas, como legumbres, marisco, cereales integrales y carne magra, puede ayudar a reducir el riesgo de hipertensión, según un estudio publicado en marzo en la revista Hypertension.os investigadores compararon los hábitos alimentarios de 12.117 adultos chinos con su tensión arterial durante una media de 6 años de seguimiento.
+
+Las personas que comían 4 o más fuentes de proteínas tenían un 66% menos de probabilidades de desarrollar hipertensión que las que sólo consumían una o 2."
         android:textAlignment="textStart" />
 
     <ImageView

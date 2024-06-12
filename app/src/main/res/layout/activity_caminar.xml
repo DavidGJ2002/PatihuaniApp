@@ -16,7 +16,7 @@
         android:padding="10dp">
         <!-- Botón de regreso -->
         <Button
-            android:id="@+id/button_back"
+            android:id="@+id/back_Regreso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regresar"
