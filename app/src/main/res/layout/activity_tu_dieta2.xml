@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Caminar">
+
+    <!-- LinearLayout horizontal para el título y el botón de regreso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:padding="10dp">
+        <!-- Botón de regreso -->
+        <Button
+            android:id="@+id/back_Regreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:layout_gravity="start"
+            android:layout_margin="16dp"/>
+        <!-- Título -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tus dietas"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Tu dieta 2"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:layout_margin="8dp"
+        android:text="Desayuno: Tostadas integrales (2 rebanadas) Aguacate (1/2 pieza) Huevo cocido (2 unidades) Zumo de naranja natural (200ml) Snack de la mañana: Yogur griego bajo en grasa (150g) con frutos rojos (fresas, arándanos) (100g) Almuerzo: Lomo de cerdo a la plancha (100g) Quinoa cocida (100g) Espárragos al vapor (150g) Snack de la tarde: Batido de proteínas con leche de almendras (200ml), plátano (100g) y mantequilla de cacahuete (2 cucharadas) Cena: Filete de ternera a la parrilla (120g) Ensalada César con pollo a la parrilla (lechuga, pollo, croutones, parmesano y aderezo ligero) (150g)"
+        android:textAlignment="textStart" />
+
+    <ImageView
+        android:id="@+id/compartirEtiquetado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whats_compartir" />
+</LinearLayout>

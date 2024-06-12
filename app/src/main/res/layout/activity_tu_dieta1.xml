@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Caminar">
+
+    <!-- LinearLayout horizontal para el título y el botón de regreso -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:padding="10dp">
+        <!-- Botón de regreso -->
+        <Button
+            android:id="@+id/back_Regreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:layout_gravity="start"
+            android:layout_margin="16dp"/>
+        <!-- Título -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tus dietas"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:srcCompat="@drawable/imagen_ensaldad_aguacte" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Tu dieta 1"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:layout_margin="8dp"
+        android:text="Desayuno: Avena cocida (50g) con leche desnatada (200ml), acompañada de una pieza de fruta fresca, como una manzana mediana (150g). Snack de la mañana: Yogur natural bajo en grasa (150g) con una porción de nueces (30g). Almuerzo: Pechuga de pollo a la plancha (100g) con una porción de arroz integral cocido (100g) y verduras al vapor (brócoli, zanahorias y coliflor, 150g en total). Snack de la tarde: Batido de proteínas con leche desnatada (200ml), plátano (100g) y espinacas frescas (50g). Cena: Salmón al horno (120g) con una ensalada mixta de hojas verdes (lechuga, espinacas) y tomate (150g), aliñada con vinagreta de limón."
+        android:textAlignment="textStart" />
+
+    <ImageView
+        android:id="@+id/compartirEtiquetado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whats_compartir" />
+</LinearLayout>
