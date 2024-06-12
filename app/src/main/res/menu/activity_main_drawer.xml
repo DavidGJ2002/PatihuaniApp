@@ -16,5 +16,14 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_complemetarias"
+            android:icon="@drawable/actividad_complemtaria_icon"
+            android:title="Actividades Complementarias" />
+        <item
+            android:id="@id/nav_metas"
+            android:icon="@drawable/ic_metas"
+            android:title="Metas"/>
+
     </group>
 </menu>
