@@ -19,9 +19,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.appsbig.patihuaniapp.R
 import com.appsbig.patihuaniapp.databinding.FragmentGalleryBinding
+import com.appsbig.patihuaniapp.EvolucionDiferencial
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import java.util.Calendar
+import java.util.concurrent.CountDownLatch
 
 class GalleryFragment : Fragment() {
 
@@ -65,7 +70,6 @@ class GalleryFragment : Fragment() {
 
         setupSpinner(binding.spEstilosVida, R.array.estilosvida)
         setupSpinner(binding.spActFisica, R.array.actividadfisica)
-        setupSpinner(binding.spObjetivo, R.array.Objetivos)
 
         binding.infoExtra.inputType = android.text.InputType.TYPE_CLASS_TEXT
 
@@ -109,7 +113,7 @@ class GalleryFragment : Fragment() {
     }
 
     private fun mostrarOpcionesDeUbicacion() {
-        val ubicaciones = arrayOf("Ubicación 1", "Ubicación 2", "Ubicación 3")
+        val ubicaciones = arrayOf("Chiapas", "Veracruz", "Monterrey")
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Seleccione una ubicación")
         builder.setItems(ubicaciones) { _, which ->
@@ -125,6 +129,7 @@ class GalleryFragment : Fragment() {
         val contrasena = "contraseña"
         val ubicacion = binding.ubicacionSeleccionada.text.toString()
         val infoExtraTexto = limpiarSepararTexto(binding.infoExtra.text.toString()).joinToString(" ")
+        val objetivo = binding.spObjetivo.selectedItem.toString()
 
         val usuario = Usuario(
             nombre = nombre,
@@ -137,10 +142,14 @@ class GalleryFragment : Fragment() {
             altura = binding.editarAltura.text.toString().toDoubleOrNull(),
             opcionLista = binding.spEstilosVida.selectedItem.toString(),
             otraOpcionLista = binding.spActFisica.selectedItem.toString(),
-            objetivo = binding.spObjetivo.selectedItem.toString(),
+            objetivo = objetivo,
             ubicacion = ubicacion,
             infoExtra = infoExtraTexto
         )
+
+        val calorias = calcularCalorias(usuario)
+        val proteinas = calcularProteinas(usuario)
+        val carbohidratos = calcularCarbohidratos(usuario)
 
         usuario.actualizarPerfil(
             fotoPerfil = selectedImageUri?.toString(),
@@ -149,20 +158,105 @@ class GalleryFragment : Fragment() {
             altura = binding.editarAltura.text.toString().toDoubleOrNull(),
             opcionLista = binding.spEstilosVida.selectedItem.toString(),
             otraOpcionLista = binding.spActFisica.selectedItem.toString(),
-            objetivo = binding.spObjetivo.selectedItem.toString(),
+            objetivo = objetivo,
             ubicacion = ubicacion,
-            infoExtra = infoExtraTexto
+            infoExtra = infoExtraTexto,
+            caloriasDiarias = calorias,
+            proteinasDiarias = proteinas,
+            carbohidratosDiarios = carbohidratos
         )
-
-        val edad = usuario.calcularEdad()
 
         database.child("usuarios").child(correo.replace(".", "_")).setValue(usuario)
             .addOnSuccessListener {
                 Toast.makeText(requireContext(), "Perfil actualizado exitosamente", Toast.LENGTH_SHORT).show()
+                obtenerDatosYOptimizar(correo)
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Error al actualizar perfil: ${it.message}", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun obtenerDatosYOptimizar(correo: String) {
+        val latch = CountDownLatch(1)
+        val database: DatabaseReference = FirebaseDatabase.getInstance().reference
+        val usuarioRef = database.child("usuarios").child(correo.replace(".", "_"))
+
+        usuarioRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val energiaDiaria = snapshot.child("caloriasDiarias").getValue(Double::class.java) ?: 0.0
+                val proteinasDiarias = snapshot.child("proteinasDiarias").getValue(Double::class.java) ?: 0.0
+                val carbohidratosDiarios = snapshot.child("carbohidratosDiarios").getValue(Double::class.java) ?: 0.0
+
+                val evolucionDiferencial = EvolucionDiferencial(
+                    tamanoPoblacion = 50,
+                    numeroVariables = 1,
+                    factorMutacion = 0.8,
+                    tasaCruzamiento = 0.9,
+                    limitesInferiores = doubleArrayOf(0.0),
+                    limitesSuperiores = doubleArrayOf(1.0),
+                    generaciones = 100,
+                    epsilon = 0.0001
+                )
+
+                evolucionDiferencial.setNecesidadesNutricionales(energiaDiaria, proteinasDiarias, carbohidratosDiarios)
+                val mejorSolucion = evolucionDiferencial.optimizar()
+
+                println("Mejor solución: ${mejorSolucion.variables.joinToString(", ")} con aptitud: ${mejorSolucion.aptitud}")
+
+                guardarSolucionOptima(correo, mejorSolucion)
+                latch.countDown()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                println("Error al obtener datos de Firebase: ${error.message}")
+                latch.countDown()
+            }
+        })
+        latch.await() // Espera a que los datos se carguen antes de continuar
+    }
+
+    private fun guardarSolucionOptima(correo: String, solucion: EvolucionDiferencial.Solucion) {
+        val database: DatabaseReference = FirebaseDatabase.getInstance().reference
+        val solucionRef = database.child("usuarios").child(correo.replace(".", "_")).child("solucionOptima")
+
+        solucionRef.setValue(solucion).addOnSuccessListener {
+            Toast.makeText(requireContext(), "Solución óptima guardada exitosamente", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener {
+            Toast.makeText(requireContext(), "Error al guardar la solución óptima: ${it.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun calcularCalorias(usuario: Usuario): Double {
+        val peso = usuario.peso ?: 0.0
+        val altura = usuario.altura ?: 0.0
+        val edad = usuario.calcularEdad() ?: 0
+        val factorActividad = obtenerFactorActividad(usuario.otraOpcionLista ?: "Sedentario")
+        return if (usuario.opcionLista == "Hombre") {
+            (88.362 + (13.397 * peso) + (4.799 * altura) - (5.677 * edad)) * factorActividad
+        } else {
+            (447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * edad)) * factorActividad
+        }
+    }
+
+    private fun calcularProteinas(usuario: Usuario): Double {
+        val peso = usuario.peso ?: 0.0
+        return peso * 1.8 // Ajusta este valor según el objetivo del usuario
+    }
+
+    private fun calcularCarbohidratos(usuario: Usuario): Double {
+        val calorias = calcularCalorias(usuario)
+        return (calorias * 0.55) / 4 // 1 gramo de carbohidrato = 4 calorías
+    }
+
+    private fun obtenerFactorActividad(nivelActividad: String): Double {
+        return when (nivelActividad) {
+            "Sedentario" -> 1.2
+            "Ligero" -> 1.375
+            "Moderado" -> 1.55
+            "Activo" -> 1.725
+            "Muy Activo" -> 1.9
+            else -> 1.2
+        }
     }
 
     private fun limpiarSepararTexto(texto: String): Array<String> {
@@ -190,8 +284,7 @@ class GalleryFragment : Fragment() {
             "estemos", "esto", "estos", "estoy", "estuve", "estuviera", "estuvierais",
             "estuvieran", "estuvieras", "estuvieron", "estuviese", "estuvieseis", "estuviesen",
             "estuvieses", "estuvimos", "estuviste", "estuvisteis", "estuviéramos", "estuviésemos",
-            "estuvo", "está", "estábamos", "estáis", "están", "estás", "esté", "estéis", "estén",
-            "estés", "ex", "existe", "existen", "explicó", "expresó", "fin", "fue", "fuera",
+            "estuvo", "está", "estábamos", "estáis", "están", "estás", "ex", "existe", "existen", "explicó", "expresó", "fin", "fue", "fuera",
             "fuerais", "fueran", "fueras", "fueron", "fuese", "fueseis", "fuesen", "fueses",
             "fui", "fuimos", "fuiste", "fuisteis", "fuéramos", "fuésemos", "gran", "grandes",
             "gueno", "ha", "haber", "habida", "habidas", "habido", "habidos", "habiendo",
@@ -226,7 +319,7 @@ class GalleryFragment : Fragment() {
             "solas", "solo", "solos", "somos", "son", "soy", "su", "sus", "suya", "suyas",
             "suyo", "suyos", "sí", "sólo", "tal", "también", "tampoco", "tan", "tanto", "te",
             "tendremos", "tendrá", "tendrán", "tendrás", "tendré", "tendréis", "tendría",
-            "tendríais", "tendríamos", "tendrían", "tendrías", "tened", "teneis", "tenemos",
+            "tendrías", "tendríamos", "tendrían", "tendrías", "tened", "teneis", "tenemos",
             "tener", "tenga", "tengamos", "tengan", "tengas", "tengo", "tengáis", "tenida",
             "tenidas", "tenido", "tenidos", "teniendo", "tenéis", "tenía", "teníais", "teníamos",
             "tenían", "tenías", "tercera", "ti", "tiempo", "tiene", "tienen", "tienes", "toda",
@@ -258,5 +351,4 @@ class GalleryFragment : Fragment() {
         }
         return palabrasLimpias.toTypedArray()
     }
-
 }

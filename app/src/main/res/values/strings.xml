@@ -17,15 +17,16 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string-array name="estilosvida">
-        <item>Hombre</item>
-        <item>Mujer</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
     </string-array>
 
     <string-array name="actividadfisica">
-        <item>Poco o nada de ejercicio</item>
-        <item>Ejercicio Ligero</item>
-        <item>Ejercicio Moderado</item>
-        <item>Ejercio Fuerte</item>
+        <item>Sedentario</item>
+        <item>Ligero</item>
+        <item>Moderado</item>
+        <item>Activo</item>
+        <item>Muy activo</item>
     </string-array>
     <string-array name="Objetivos">
         <item>Mantener peso </item>

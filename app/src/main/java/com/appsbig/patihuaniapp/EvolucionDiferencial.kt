@@ -15,6 +15,15 @@ class EvolucionDiferencial(
     data class Solucion(val variables: DoubleArray, val aptitud: Double, val restricciones: DoubleArray, val svr: Double)
 
     private lateinit var poblacion: Array<Solucion>
+    private var energiaDiaria: Double = 0.0
+    private var proteinasDiarias: Double = 0.0
+    private var carbohidratosDiarios: Double = 0.0
+
+    fun setNecesidadesNutricionales(energia: Double, proteinas: Double, carbohidratos: Double) {
+        this.energiaDiaria = energia
+        this.proteinasDiarias = proteinas
+        this.carbohidratosDiarios = carbohidratos
+    }
 
     fun optimizar(): Solucion {
         poblacion = inicializarPoblacion()
@@ -91,33 +100,25 @@ class EvolucionDiferencial(
     }
 
     private fun funcionObjetivo(x: DoubleArray): Double {
-        val costos = doubleArrayOf(2.5, 3.0, 1.5)
+        val costos = doubleArrayOf(2.5)
         val resultado = x.zip(costos).sumOf { it.first * it.second }
         return resultado
     }
 
     private fun calcularRestriccionesG(x: DoubleArray): DoubleArray {
-        val energiaDiaria = 9623.35
-        val proteinasDiarias = 84.0
-        val carbohidratosDiarios = 316.07
-        val colesterolMaximo = 300.0
-
-        val energia = doubleArrayOf(500.0, 300.0, 200.0)
-        val proteinas = doubleArrayOf(30.0, 20.0, 10.0)
-        val carbohidratos = doubleArrayOf(50.0, 60.0, 40.0)
-        val colesterol = doubleArrayOf(30.0, 20.0, 10.0)
+        val energia = doubleArrayOf(500.0)
+        val proteinas = doubleArrayOf(30.0)
+        val carbohidratos = doubleArrayOf(50.0)
 
         val energiaTotal = x.zip(energia).sumOf { it.first * it.second }
         val proteinasTotal = x.zip(proteinas).sumOf { it.first * it.second }
         val carbohidratosTotal = x.zip(carbohidratos).sumOf { it.first * it.second }
-        val colesterolTotal = x.zip(colesterol).sumOf { it.first * it.second }
 
         val g1 = energiaDiaria - energiaTotal
         val g2 = proteinasDiarias - proteinasTotal
         val g3 = carbohidratosDiarios - carbohidratosTotal
-        val g4 = colesterolTotal - colesterolMaximo
 
-        val restricciones = doubleArrayOf(g1, g2, g3, g4)
+        val restricciones = doubleArrayOf(g1, g2, g3)
 
         return restricciones
     }
@@ -129,5 +130,5 @@ class EvolucionDiferencial(
     private fun DoubleArray.sum(): Double {
         return if (this.isEmpty()) 0.0 else this.reduce { acc, d -> acc + d }
     }
-}
 
+}

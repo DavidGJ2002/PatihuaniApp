@@ -19,7 +19,10 @@ class Usuario(
     var otraOpcionLista: String? = null,
     var objetivo: String? = null,
     var ubicacion: String? = null,
-    var infoExtra: String? = null
+    var infoExtra: String? = null,
+    var caloriasDiarias: Double? = null,
+    var proteinasDiarias: Double? = null,
+    var carbohidratosDiarios: Double? = null
 ) {
     // Constructor secundario para inicialización con solo los datos obligatorios
     constructor(nombre: String, apellidos: String, correo: String, contrasena: String) : this(nombre, apellidos, correo, contrasena, null, null, null, null, null, null, null, null, null)
@@ -37,7 +40,10 @@ class Usuario(
         otraOpcionLista: String?,
         objetivo: String?,
         ubicacion: String?,
-        infoExtra: String?
+        infoExtra: String?,
+        caloriasDiarias: Double?,
+        proteinasDiarias: Double?,
+        carbohidratosDiarios: Double?
     ) {
         this.fotoPerfil = if (fotoPerfil != null) Uri.parse(fotoPerfil) else null
         this.fechaNacimiento = fechaNacimiento
@@ -48,6 +54,9 @@ class Usuario(
         this.objetivo = objetivo
         this.ubicacion = ubicacion
         this.infoExtra = infoExtra
+        this.caloriasDiarias = caloriasDiarias
+        this.proteinasDiarias = proteinasDiarias
+        this.carbohidratosDiarios = carbohidratosDiarios
 
         val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("usuarios").child(correo.replace(".", "_"))
