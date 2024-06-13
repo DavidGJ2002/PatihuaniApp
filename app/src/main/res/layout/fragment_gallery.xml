@@ -9,8 +9,8 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imagenPerfil"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:layout_marginTop="4dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,12 +22,13 @@
 
     <ImageButton
         android:id="@+id/botonAgregaFoto"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="96dp"
         android:scaleType="centerInside"
         android:src="@drawable/camara"
         app:layout_constraintEnd_toEndOf="@+id/imagenPerfil"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/imagenPerfil"
         app:layout_constraintTop_toTopOf="@+id/imagenPerfil" />
 
@@ -109,7 +110,7 @@
 
     <TextView
         android:id="@+id/ubicacionSeleccionada"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Ubicación no seleccionada"
         app:layout_constraintEnd_toEndOf="parent"

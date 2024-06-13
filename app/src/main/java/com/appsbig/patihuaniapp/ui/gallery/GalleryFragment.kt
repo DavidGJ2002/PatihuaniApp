@@ -152,7 +152,6 @@ class GalleryFragment : Fragment() {
         )
 
         val edad = usuario.calcularEdad()
-        println("La edad del usuario es: $edad")
 
         database.child("usuarios").child(correo.replace(".", "_")).setValue(usuario)
             .addOnSuccessListener {
