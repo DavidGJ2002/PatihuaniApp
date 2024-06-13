@@ -1,61 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app= "http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   tools:context=".EducacionNutricional">
+    tools:context=".ui.AlternativaFragment">
 
  <androidx.constraintlayout.widget.ConstraintLayout
      android:layout_width="match_parent"
      android:layout_height="match_parent">
 
      <LinearLayout
-         android:id="@+id/linearLayout7"
+         android:id="@+id/linearLayout3"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:gravity="start"
          android:orientation="horizontal"
          android:padding="10dp"
+         app:layout_constraintEnd_toEndOf="parent"
          app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent" />
+         app:layout_constraintTop_toTopOf="parent"
+         tools:ignore="ExtraText,MissingConstraints"><![CDATA[>
+
+        ]]>
+
+         <Button
+             android:id="@+id/button_back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="start"
+             android:layout_margin="16dp"
+             android:layout_marginStart="16dp"
+             android:layout_marginTop="16dp"
+             android:text="Regresar" />
+
+         <Button
+             android:id="@+id/button12"
+             android:layout_width="252dp"
+             android:layout_height="58dp"
+             android:text="Alternativas dietas"
+             android:textColor="@android:color/black"
+             tools:ignore="MissingConstraints"
+
+             />
+     </LinearLayout>
      <!-- Botón de regreso -->
      <!-- Título -->
 
-     <Button
-         android:id="@+id/button_back"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_gravity="start"
-         android:layout_margin="16dp"
-         android:layout_marginStart="16dp"
-         android:layout_marginTop="20dp"
-         android:text="Regresar"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent" />
-
      <LinearLayout
-         android:id="@+id/linearLayout8"
+         android:id="@+id/linearLayout4"
          android:layout_width="158dp"
          android:layout_height="201dp"
-         android:layout_marginStart="36dp"
-         android:layout_marginTop="152dp"
+         android:layout_marginStart="33dp"
+         android:layout_marginTop="148dp"
          android:orientation="vertical"
          app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent">
+         app:layout_constraintTop_toTopOf="parent"
+         tools:ignore="MissingConstraints">
 
          <ImageView
-             android:id="@+id/imageView5"
+             android:id="@+id/imageView13"
              android:layout_width="match_parent"
-             android:layout_height="122dp"
-             app:srcCompat="@drawable/etiquetado" />
+             android:layout_height="128dp"
+             app:srcCompat="@drawable/img" />
 
          <TextView
              android:id="@+id/textView2"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_gravity="start"
-             android:text="Empaquetado"
+             android:text="Dieta saludable 1"
              app:layout_constraintBottom_toBottomOf="parent"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
@@ -65,35 +79,35 @@
              android:id="@+id/button8"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:layout_gravity="start"
              android:background="@android:color/white"
-             android:text="Informacion"
+             android:text="Ver mas..."
+
              android:textColor="@android:color/black" />
 
      </LinearLayout>
 
      <LinearLayout
-         android:id="@+id/linearLayout9"
          android:layout_width="152dp"
          android:layout_height="206dp"
-         android:layout_marginTop="152dp"
-         android:layout_marginEnd="27dp"
+         android:layout_marginTop="48dp"
+         android:layout_marginEnd="26dp"
          android:orientation="vertical"
          app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintTop_toTopOf="parent">
+         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+         tools:ignore="MissingConstraints">
 
          <ImageView
-             android:id="@+id/imageView6"
+             android:id="@+id/imageView15"
              android:layout_width="match_parent"
-             android:layout_height="130dp"
-             app:srcCompat="@drawable/hipertencion" />
+             android:layout_height="127dp"
+             app:srcCompat="@drawable/imagen_ensaldad_aguacte" />
 
          <TextView
              android:id="@+id/textView9"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_gravity="start"
-             android:text="Hipertencion"
+             android:text="Dieta saludable 2"
              app:layout_constraintBottom_toBottomOf="parent"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
@@ -103,9 +117,9 @@
              android:id="@+id/button9"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:layout_gravity="start"
              android:background="@android:color/white"
-             android:text="Informacion"
+             android:text="Ver mas ..."
+
              android:textColor="@android:color/black" />
 
      </LinearLayout>
@@ -113,25 +127,24 @@
      <LinearLayout
          android:layout_width="152dp"
          android:layout_height="206dp"
-         android:layout_marginStart="36dp"
-         android:layout_marginTop="392dp"
+         android:layout_marginStart="32dp"
+         android:layout_marginBottom="128dp"
          android:orientation="vertical"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         tools:ignore="MissingConstraints">
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent">
 
          <ImageView
-             android:id="@+id/imageView11"
+             android:id="@+id/imageView16"
              android:layout_width="match_parent"
-             android:layout_height="130dp"
-             app:srcCompat="@drawable/lacteos" />
+             android:layout_height="128dp"
+             app:srcCompat="@drawable/imagen_ensaldad_aguacte" />
 
          <TextView
              android:id="@+id/textView10"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_gravity="start"
-             android:text="Uso de Lacteos"
+             android:text="Alternativa de dieta 1"
              app:layout_constraintBottom_toBottomOf="parent"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
@@ -141,37 +154,34 @@
              android:id="@+id/button10"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:layout_gravity="start"
              android:background="@android:color/white"
-             android:text="Informacion"
-             android:textColor="@android:color/black"
-             app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintTop_toTopOf="parent" />
+             android:text="Ver mas ..."
+
+             android:textColor="@android:color/black" />
      </LinearLayout>
 
      <LinearLayout
          android:layout_width="152dp"
          android:layout_height="206dp"
-         android:layout_marginStart="232dp"
-         android:layout_marginTop="392dp"
+         android:layout_marginEnd="26dp"
+         android:layout_marginBottom="130dp"
          android:orientation="vertical"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
          tools:ignore="MissingConstraints">
 
          <ImageView
-             android:id="@+id/imageView12"
+             android:id="@+id/imageView14"
              android:layout_width="match_parent"
-             android:layout_height="130dp"
-             app:srcCompat="@drawable/pan" />
+             android:layout_height="127dp"
+             app:srcCompat="@drawable/img" />
 
          <TextView
              android:id="@+id/textView11"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_gravity="start"
-             android:text="Noticia"
-
+             android:text="Alternatica de dieta 2"
              app:layout_constraintBottom_toBottomOf="parent"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
@@ -182,44 +192,41 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:background="@android:color/white"
-             android:gravity="start"
-             android:text="Informacion"
+             android:text="Ver mas ..."
+
              android:textColor="@android:color/black" />
      </LinearLayout>
+
+     <TextView
+         android:id="@+id/textView13"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="120dp"
+         android:text="TUS DIETAS"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         tools:ignore="MissingConstraints" />
 
      <TextView
          android:id="@+id/textView12"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_gravity="start"
-         android:layout_marginStart="36dp"
-         android:layout_marginTop="116dp"
-         android:text="Noticias "
+         android:layout_marginStart="32dp"
+         android:layout_marginTop="364dp"
+         android:text="ALTERNATIVAS DE DIETAS"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toTopOf="parent"
          tools:ignore="MissingConstraints" />
 
-     <Button
-         android:id="@+id/button12"
-         android:layout_width="239dp"
-         android:layout_height="39dp"
-         android:layout_marginStart="92dp"
-         android:layout_marginTop="64dp"
-         android:text="Educacion Nutricional"
-         android:textColor="@android:color/black"
-         app:layout_constraintStart_toStartOf="@+id/linearLayout7"
-         app:layout_constraintTop_toTopOf="@+id/linearLayout7"
-          />
-
      <TextView
-         android:id="@+id/textView16"
+         android:id="@+id/textView15"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_marginStart="4dp"
-         android:layout_marginBottom="44dp"
-         android:text="Pra mas informar consulta nuestra pagina www.patuaniApp.com"
+         android:layout_marginBottom="45dp"
+         android:text="Para mas informacion consulta nuestro sitio web www.PatihuaniApp.com"
          app:layout_constraintBottom_toBottomOf="parent"
-         app:layout_constraintStart_toStartOf="parent" />
+         app:layout_constraintEnd_toEndOf="parent" />
 
  </androidx.constraintlayout.widget.ConstraintLayout>
 

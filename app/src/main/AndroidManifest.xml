@@ -38,6 +38,9 @@
         <activity
             android:name=".alternativasDietas"
             android:exported="false" />
+       <activity
+        android:name=".ui.Soporte"
+        android:exported="false" />
         <activity
             android:name=".Navegacion"
             android:exported="false"

@@ -27,12 +27,12 @@
         android:name="com.appsbig.patihuaniapp.ui.actividadescomplementarias.actividadesComplementariasFragment"
         android:label="Actividades complementarias"
         tools:layout="@layout/fragment_actividades_complementarias" />
-    <fragment
+   <!-- <fragment
         android:id="@+id/nav_metas"
         android:name="com.appsbig.patihuaniapp.ui.metas.MetasFragment"
         android:label="Eventos"
         tools:layout="@layout/fragment_metas" />
-
+    -->
     <fragment
         android:id="@+id/nav_edu"
         android:name="com.appsbig.patihuaniapp.ui.EducacionFragment"
@@ -48,6 +48,10 @@
         android:name="com.appsbig.patihuaniapp.ui.diaria.DiariaFragment"
         android:label="Ayuda"
         tools:layout="@layout/fragment_diaria" />
-
+    <fragment
+        android:id="@+id/nav_alterna"
+        android:name="com.appsbig.patihuaniapp.ui.AlternativaFragment"
+        android:label="Dieta alternativa"
+        tools:layout="@layout/fragment_alternativa" />
 
 </navigation>

@@ -10,6 +10,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/lLFAQ"
             android:layout_width="175dp"
             android:layout_height="261dp"
             android:layout_marginStart="32dp"
