@@ -12,36 +12,7 @@ class ActividadesComplementarias : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actividades_complementarias)
 
-        // Configurar el botón de regreso
-        val backButton = findViewById<Button>(R.id.button_back)
-        backButton.setOnClickListener {
-            val intent = Intent(this, Bienvenido::class.java)
-            startActivity(intent)
-            finish()
-        }
 
-        // Buscar los botones en el layout
-        val button8 = findViewById<Button>(R.id.button8)
-        val button9 = findViewById<Button>(R.id.button9)
-        val button10 = findViewById<Button>(R.id.button10)
-        val button11 = findViewById<Button>(R.id.button11)
-
-        // Agregar listeners a los botones
-        button8.setOnClickListener {
-            abrirActividad("caminar")
-        }
-
-        button9.setOnClickListener {
-            abrirActividad("correr")
-        }
-
-        button10.setOnClickListener {
-            abrirActividad("nadar")
-        }
-
-        button11.setOnClickListener {
-            abrirActividad("saltar")
-        }
     }
 
     private fun abrirActividad(botonSeleccionado: String) {

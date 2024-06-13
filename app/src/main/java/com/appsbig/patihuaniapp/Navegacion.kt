@@ -1,6 +1,7 @@
 package com.appsbig.patihuaniapp
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -10,6 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.appsbig.patihuaniapp.alvaro.SettingsFragment
 import com.appsbig.patihuaniapp.databinding.ActivityNavegacionBinding
 
 class Navegacion : AppCompatActivity() {
@@ -42,6 +44,21 @@ private lateinit var binding: ActivityNavegacionBinding
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.action_settings -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.settings_container, SettingsFragment()) // Use the ID of your container
+                    .addToBackStack(null) // Optional: Add to back stack for navigation
+                    .commit()
+                true
+
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_navegacion)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()

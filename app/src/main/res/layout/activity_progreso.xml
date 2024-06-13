@@ -13,7 +13,7 @@
         android:layout_marginBottom="55dp"
         android:text="Añade tus objetivos saludables"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/dieta_diaria_whats"
+        app:layout_constraintBottom_toTopOf="@+id/progreso_whats"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <androidx.cardview.widget.CardView

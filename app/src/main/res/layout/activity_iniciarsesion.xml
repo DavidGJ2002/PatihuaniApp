@@ -49,12 +49,12 @@
         android:id="@+id/textViewC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:text="Contraseña"
 
         app:layout_constraintTop_toBottomOf="@+id/nombre"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="64dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"

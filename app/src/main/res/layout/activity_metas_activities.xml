@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alvaro.MetasActivities"
+    android:orientation="vertical">
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id= "@+id/grupo_tipo_meta">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="listo"
+            android:id= "@id/boton_listo"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="listo"
+            android:id= "@+id/boton_listo2"/>
+    </RadioGroup>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="interuptor_alarmainteruptor_alarma"
+        android:id= "@+id/interruptor_recordatorio"/>
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id= "@+id/selector_hora"/>
+    <Button
+        android:id= "@+id/boton_listo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="listo"
+/>
+
+        
+</LinearLayout>

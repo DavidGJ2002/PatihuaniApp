@@ -33,4 +33,10 @@
         android:label="Eventos"
         tools:layout="@layout/fragment_metas" />
 
+    <fragment
+        android:id="@+id/nav_edu"
+        android:name="com.appsbig.patihuaniapp.ui.EducacionFragment"
+        android:label="Educación"
+        tools:layout="@layout/fragment_educacion" />
+
 </navigation>

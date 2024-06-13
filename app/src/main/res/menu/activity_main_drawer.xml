@@ -6,16 +6,17 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/baseline_account_balance_24"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
+            android:icon="@drawable/outline_account_circle_24"
+            android:title="Perfil" />
+      <!---  <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+      -->
         <item
             android:id="@+id/nav_complemetarias"
             android:icon="@drawable/actividad_complemtaria_icon"
@@ -24,6 +25,10 @@
             android:id="@id/nav_metas"
             android:icon="@drawable/ic_metas"
             android:title="Metas"/>
+        <item
+            android:id="@+id/nav_edu"
+            android:icon="@drawable/baseline_accessibility_24"
+            android:title="Educación"/>
 
     </group>
 </menu>

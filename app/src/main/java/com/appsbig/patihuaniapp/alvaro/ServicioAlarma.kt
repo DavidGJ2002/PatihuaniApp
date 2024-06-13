@@ -14,6 +14,6 @@ object ServicioAlarma {
 
         val intentoPendiente = PendingIntent.getBroadcast(contexto, idAlarma, intento, PendingIntent.FLAG_UPDATE_CURRENT)
 
-        administradorAlarma.setExact(AlarmManager.RTC_WAKEUP, tiempoDisparoMilisegundos, intentoPendiente)
+        administradorAlarma.set(AlarmManager.RTC_WAKEUP, tiempoDisparoMilisegundos, intentoPendiente)
     }
 }
