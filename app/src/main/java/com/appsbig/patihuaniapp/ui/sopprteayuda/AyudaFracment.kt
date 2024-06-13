@@ -12,6 +12,7 @@ import android.widget.ImageView
 import com.appsbig.patihuaniapp.IniciarSesion
 import com.appsbig.patihuaniapp.R
 import com.appsbig.patihuaniapp.ui.PersonalizarRecomendaciones
+import com.appsbig.patihuaniapp.ui.Soporte
 
 class AyudaFracment : Fragment() {
 
@@ -40,7 +41,7 @@ class AyudaFracment : Fragment() {
         }
         val imageFaq = raiz.findViewById<ImageView>(R.id.faqV)
         imageFaq.setOnClickListener {
-            val intent = Intent(context, PersonalizarRecomendaciones::class.java)
+            val intent = Intent(context, Soporte::class.java)
             startActivity(intent)
             activity?.finish()
         }
