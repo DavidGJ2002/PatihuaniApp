@@ -65,6 +65,7 @@ class GalleryFragment : Fragment() {
 
         setupSpinner(binding.spEstilosVida, R.array.estilosvida)
         setupSpinner(binding.spActFisica, R.array.actividadfisica)
+        setupSpinner(binding.spObjetivo, R.array.Objetivos)
 
         binding.infoExtra.inputType = android.text.InputType.TYPE_CLASS_TEXT
 
@@ -136,6 +137,7 @@ class GalleryFragment : Fragment() {
             altura = binding.editarAltura.text.toString().toDoubleOrNull(),
             opcionLista = binding.spEstilosVida.selectedItem.toString(),
             otraOpcionLista = binding.spActFisica.selectedItem.toString(),
+            objetivo = binding.spObjetivo.selectedItem.toString(),
             ubicacion = ubicacion,
             infoExtra = infoExtraTexto
         )
@@ -147,6 +149,7 @@ class GalleryFragment : Fragment() {
             altura = binding.editarAltura.text.toString().toDoubleOrNull(),
             opcionLista = binding.spEstilosVida.selectedItem.toString(),
             otraOpcionLista = binding.spActFisica.selectedItem.toString(),
+            objetivo = binding.spObjetivo.selectedItem.toString(),
             ubicacion = ubicacion,
             infoExtra = infoExtraTexto
         )

@@ -17,10 +17,8 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string-array name="estilosvida">
-        <item>Poco o nada de ejercicio</item>
-        <item>Ejercicio Ligero</item>
-        <item>Ejercicio Moderado</item>
-        <item>Ejercio Fuerte</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
     </string-array>
 
     <string-array name="actividadfisica">
@@ -28,5 +26,10 @@
         <item>Ejercicio Ligero</item>
         <item>Ejercicio Moderado</item>
         <item>Ejercio Fuerte</item>
+    </string-array>
+    <string-array name="Objetivos">
+        <item>Mantener peso </item>
+        <item>Ganar peso</item>
+        <item>Perder peso</item>
     </string-array>
 </resources>

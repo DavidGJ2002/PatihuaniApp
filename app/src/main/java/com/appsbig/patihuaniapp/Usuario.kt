@@ -17,11 +17,12 @@ class Usuario(
     var altura: Double? = null,
     var opcionLista: String? = null,
     var otraOpcionLista: String? = null,
+    var objetivo: String? = null,
     var ubicacion: String? = null,
     var infoExtra: String? = null
 ) {
     // Constructor secundario para inicialización con solo los datos obligatorios
-    constructor(nombre: String, apellidos: String, correo: String, contrasena: String) : this(nombre, apellidos, correo, contrasena, null, null, null, null, null, null, null, null)
+    constructor(nombre: String, apellidos: String, correo: String, contrasena: String) : this(nombre, apellidos, correo, contrasena, null, null, null, null, null, null, null, null, null)
 
     // Constructor vacío
     constructor() : this("", "", "", "")
@@ -34,6 +35,7 @@ class Usuario(
         altura: Double?,
         opcionLista: String?,
         otraOpcionLista: String?,
+        objetivo: String?,
         ubicacion: String?,
         infoExtra: String?
     ) {
@@ -43,6 +45,7 @@ class Usuario(
         this.altura = altura
         this.opcionLista = opcionLista
         this.otraOpcionLista = otraOpcionLista
+        this.objetivo = objetivo
         this.ubicacion = ubicacion
         this.infoExtra = infoExtra
 
