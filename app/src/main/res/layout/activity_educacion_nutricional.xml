@@ -7,15 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".EducacionNutricional"
     tools:ignore="ExtraText">
+
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="start"
+        android:orientation="horizontal"
         android:padding="10dp"
         tools:ignore="MissingConstraints"></LinearLayout>
     <!-- Botón de regreso -->
     <!-- Título -->
+
     <Button
         android:id="@+id/button_back"
         android:layout_width="wrap_content"
@@ -23,6 +26,7 @@
         android:layout_gravity="start"
         android:layout_margin="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:text="Regresar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,10 +34,11 @@
     <LinearLayout
         android:layout_width="158dp"
         android:layout_height="201dp"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="148dp"
         android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="33dp"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -57,19 +62,22 @@
             android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:background="@android:color/white"
             android:text="Informacion"
-            android:layout_gravity="start"
             android:textColor="@android:color/black" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="152dp"
         android:layout_height="206dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -93,9 +101,9 @@
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:background="@android:color/white"
             android:text="Informacion"
-            android:layout_gravity="start"
             android:textColor="@android:color/black" />
 
     </LinearLayout>
@@ -103,9 +111,11 @@
     <LinearLayout
         android:layout_width="152dp"
         android:layout_height="206dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="400dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="395dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -132,17 +142,19 @@
             android:layout_gravity="start"
             android:background="@android:color/white"
             android:text="Informacion"
+            android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@android:color/black" />
+            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="152dp"
         android:layout_height="206dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="24dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="395dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -158,18 +170,18 @@
             android:layout_gravity="start"
             android:text="Noticia"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
-            android:text="Informacion"
             android:gravity="start"
+            android:text="Informacion"
             android:textColor="@android:color/black" />
     </LinearLayout>
 
@@ -177,32 +189,33 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="108dp"
         android:text="Noticias "
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="95dp"
-        android:layout_gravity="start"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button12"
         android:layout_width="239dp"
         android:layout_height="39dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="84dp"
         android:text="Educacion Nutricional"
         android:textColor="@android:color/black"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="84dp"
-
-        android:text="Ver Mas"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Para mas informacion consulta nueestro sitio web www.PatihuaniApp.com.mx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
