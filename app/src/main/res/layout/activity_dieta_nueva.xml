@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DietaNueva">
+
+    <Button
+        android:id="@+id/back_DietaNueva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +39,8 @@
         android:text="Esta semana tenemos una dieta como alternativa"
         android:layout_margin="10dp"
         android:textAlignment="textStart"/>
+
+
 
 
 </LinearLayout>

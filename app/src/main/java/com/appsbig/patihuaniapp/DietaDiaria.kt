@@ -1,11 +1,15 @@
 package com.appsbig.patihuaniapp
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import com.appsbig.patihuaniapp.alvaro.Whatsapp
 
 class DietaDiaria : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dieta_diaria)
@@ -14,6 +18,13 @@ class DietaDiaria : AppCompatActivity() {
         imagen.setOnClickListener {// cuando se hace click en la imagen
             Whatsapp.compartirMensajeTexto(this, stringMsj)
         // llama a la funcion compartirMensajeTexto de la clase Whatsapp
+        }
+        setContentView(R.layout.activity_alternativas_dietas)
+        val backButton = findViewById<Button>(R.id.back_DietaDiaria)
+        backButton.setOnClickListener {
+            val intent = Intent(this, Navegacion::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
