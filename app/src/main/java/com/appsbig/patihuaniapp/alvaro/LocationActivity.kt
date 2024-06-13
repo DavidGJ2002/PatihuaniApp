@@ -37,6 +37,14 @@ class LocationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location)
 
+      Localizacion()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        fusedLocationProviderClient?.removeLocationUpdates(mLocationCallback)
+    }
+    public fun Localizacion(){
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         mLocationRequest = LocationRequest.create()
         val locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -46,12 +54,6 @@ class LocationActivity : AppCompatActivity() {
         checkForPermission(this)
         startLocationUpdates()
     }
-
-    override fun onPause() {
-        super.onPause()
-        fusedLocationProviderClient?.removeLocationUpdates(mLocationCallback)
-    }
-
     private val mLocationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
             locationResult.lastLocation

@@ -38,5 +38,16 @@
         android:name="com.appsbig.patihuaniapp.ui.EducacionFragment"
         android:label="Educación"
         tools:layout="@layout/fragment_educacion" />
+    <fragment
+        android:id="@+id/nav_ayuda"
+        android:name="com.appsbig.patihuaniapp.ui.sopprteayuda.AyudaFracment"
+        android:label="Ayuda"
+        tools:layout="@layout/fragment_ayuda_fracment" />
+    <fragment
+        android:id="@+id/nav_diaria"
+        android:name="com.appsbig.patihuaniapp.ui.diaria.DiariaFragment"
+        android:label="Ayuda"
+        tools:layout="@layout/fragment_diaria" />
+
 
 </navigation>

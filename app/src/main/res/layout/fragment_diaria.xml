@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.diaria.DiariaFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView6"
+          android:layout_width="145dp"
+          android:layout_height="44dp"
+          android:layout_marginStart="25dp"
+          android:layout_marginBottom="55dp"
+          android:text="Ingredientes "
+          android:textSize="20sp"
+          app:layout_constraintBottom_toTopOf="@+id/dieta_diaria_whats"
+          app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/cardView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="17dp"
+          app:layout_constraintBottom_toTopOf="@+id/textView6"
+          app:layout_constraintEnd_toEndOf="parent">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/imagen_ensaldad_aguacte" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ensalada" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cal:320,Prot:15g,Carb:30g"
+                android:textStyle="bold" />
+
+
+         </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:layout_marginEnd="243dp"
+          android:text="Hola ..."
+          android:textSize="28sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="112dp"
+          android:orientation="horizontal"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Desayuno" />
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Comida" />
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Cena" />
+
+
+      </LinearLayout>
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:layout_width="43dp"
+          android:layout_height="44dp"
+          android:layout_marginStart="9dp"
+          android:background="@color/cardview_dark_background"
+          android:src="@drawable/ic_launcher_foreground"
+
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:shapeAppearanceOverlay="@style/ImageViewRedonda" />
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="9dp"
+          android:layout_marginTop="17dp"
+          android:text="Tu día a día"
+          android:textSize="14sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="43dp"
+          android:layout_height="83dp"
+          android:layout_marginStart="45dp"
+          android:layout_marginTop="18dp"
+          android:src="@drawable/gorro_shef"
+
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+      <ImageView
+          android:id="@+id/dieta_diaria_whats"
+          android:layout_width="384dp"
+          android:layout_height="112dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginBottom="4dp"
+          android:src="@drawable/whats_compartir"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent" />
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="36dp"
+          android:layout_marginBottom="116dp"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/textView6">
+
+         <TextView
+             android:id="@+id/textView5"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="9dp"
+             android:layout_marginTop="17dp"
+             android:text="-Tomate"
+             android:textSize="14sp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+         <TextView
+             android:id="@+id/textView7"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="9dp"
+             android:layout_marginTop="17dp"
+             android:text="-Espinacas"
+             android:textSize="14sp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+         <TextView
+             android:id="@+id/textView8"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="9dp"
+             android:layout_marginTop="17dp"
+             android:text="Aguacate"
+             android:textSize="14sp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/textView" />
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/back_DietaDiaria"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:layout_marginEnd="32dp"
+          android:text="Regresar"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -17,10 +17,11 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
       -->
-        <item
+       <!-- <item
             android:id="@+id/nav_complemetarias"
             android:icon="@drawable/actividad_complemtaria_icon"
             android:title="Actividades Complementarias" />
+           -->
         <item
             android:id="@id/nav_metas"
             android:icon="@drawable/ic_metas"
@@ -29,6 +30,15 @@
             android:id="@+id/nav_edu"
             android:icon="@drawable/baseline_accessibility_24"
             android:title="Educación"/>
+        <item
+            android:id="@+id/nav_ayuda"
+            android:icon="@drawable/faq"
+            android:title="Ayuda y soporte"/>
+        <item
+            android:id="@+id/nav_diaria"
+            android:icon="@drawable/faq"
+            android:title="Dieta Diaria"/>
+
 
     </group>
 </menu>

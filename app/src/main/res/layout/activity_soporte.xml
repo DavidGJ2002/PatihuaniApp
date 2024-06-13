@@ -30,12 +30,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/help_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Aquí puedes incluir tu contenido de ayuda, como preguntas frecuentes, tutoriales, o instrucciones de uso." />
-
             <!-- Agrega más secciones aquí según sea necesario -->
             <TextView
                 android:layout_width="match_parent"
