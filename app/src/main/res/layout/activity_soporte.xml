@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/backSoporte"
+        android:layout_width="117dp"
+        android:layout_height="36dp"
+        android:text="Regresar" />
+    <TextView
+        android:id="@+id/help_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soporte y Ayuda"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/help_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquí puedes incluir tu contenido de ayuda, como preguntas frecuentes, tutoriales, o instrucciones de uso." />
+
+            <!-- Agrega más secciones aquí según sea necesario -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preguntas Frecuentes (FAQs)"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. ¿Cómo uso la aplicación?\nRespuesta: Para usar la aplicación, debes seguir estos pasos...\n1.-Debes tener un perfil previamente creado para poder acceder a la aplicacion en caso de no tenerlo tendras que crear un perfil con tu usuario y contraseña\n2.- Una vez ingrea la contraseña y usuario correcto la aplicacion te enviara al menu inicio\n 3.-En el menu inicio podras realizar las funcionalidades correspondientes para crear, visualizar , persoanlizar o medir tu progreso segun lo desees. \n 4.- Una vez interactuado con la app la informacion se guardara y se podra realizar ajustes cada vez que rl usuario lo indique"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. ¿para que sirve esta app?\nRespuesta: Nuestra app de dietas personalizada te ayuda a alcanzar tus objetivos de salud ofreciendo planes alimenticios adaptados a tus preferencias y necesidades. Con opciones variadas y alternativas saludables, podrás disfrutar de una alimentación equilibrada fácilmente."
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. ¿Cómo contacto con soporte?\nRespuesta: Puedes contactar con soporte enviando un correo a PatihuaniApp@gmail.com."
+                android:layout_marginTop="8dp" />
+
+            <!-- Sección de Contacto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contacto"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Si necesitas más ayuda, por favor, envía un correo a soporte@ejemplouv.com o llama al 123-456-7890."
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
