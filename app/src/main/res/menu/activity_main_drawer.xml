@@ -22,10 +22,11 @@
             android:icon="@drawable/actividad_complemtaria_icon"
             android:title="Actividades Complementarias" />
 
-        <item
+        <!-- <item
             android:id="@id/nav_metas"
             android:icon="@drawable/ic_metas"
             android:title="Metas"/>
+            -->
         <item
             android:id="@+id/nav_edu"
             android:icon="@drawable/baseline_accessibility_24"
